@@ -6,5 +6,5 @@ package com.client.api;
 public interface VoltageListener {
     void onBlock();
     void onUnblock();
-    void onChange(boolean b); // true if blocked
+    void onChange(boolean blocked); // true if blocked
 }
