@@ -56,11 +56,16 @@ public class VirtualSerialPort extends Serial {
 
     public void addListener(SerialListener s) {
         super.addListener(s);
-        try {
+//        try {
+//            loop(s);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+    }
+
+    public void go() throws InterruptedException {
+        for(SerialListener s : listeners)
             loop(s);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     /**
