@@ -1,3 +1,5 @@
+package com.client.api;
+
 /**
  * Event callable interface
  *

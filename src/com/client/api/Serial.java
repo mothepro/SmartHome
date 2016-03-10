@@ -1,10 +1,11 @@
+package com.client.api;
+
 import gnu.io.PortInUseException;
 import gnu.io.SerialPort;
 import gnu.io.SerialPortEventListener;
 import gnu.io.UnsupportedCommOperationException;
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPortEvent;
-import gnu.io.SerialPortEventListener;
 
 import java.io.BufferedReader;
 import java.io.IOException;

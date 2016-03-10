@@ -1,3 +1,8 @@
+package com.client.impl;
+
+import com.client.api.Serial;
+import com.client.api.SerialListener;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;

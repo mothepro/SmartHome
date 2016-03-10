@@ -1,3 +1,5 @@
+package com.client.api;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,6 +77,14 @@ public class Voltage {
     private void trim() {
         while(SAVE >= 2 && data.size() > SAVE)
             data.remove(0);
+    }
+
+    /**
+     * Attach a new listener
+     * @param v
+     */
+    public void addListener(VoltageListener v) {
+        listeners.add(v);
     }
 
     /**
