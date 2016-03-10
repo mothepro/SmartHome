@@ -14,11 +14,12 @@ public class Sensor extends Voltage implements VoltageListener {
     Sensor(SensorListener l) {
         id = Sensor.counter++;
         listener = l;
+        addListener(this);
     }
 
-    public void addListener(VoltageListener v) {
-        throw new UnsupportedOperationException("Not Supported");
-    }
+//    public void addListener(VoltageListener v) {
+//        throw new UnsupportedOperationException("Not Supported");
+//    }
 
     @Override
     public void onBlock() {
