@@ -2,6 +2,7 @@ package com.client.impl;
 
 import com.client.api.Serial;
 import com.client.api.SerialListener;
+import com.client.test.VirtualSerialPort;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,11 +23,13 @@ public class Example implements SerialListener {
             System.out.println("Attempting to connect to device: " + s);
 
             try {
-                serial = new Serial(s);
-                System.out.println("Success!");
+                if(s.isEmpty()) // virtual if empty
+                    serial = new VirtualSerialPort("src/com/client/test/res/scenario.raw");
+                else
+                    serial = new Serial(s);
 
                 serial.addListener(this);
-                send("Hello");
+                send("Success!");
             } catch (Exception e) {
                 e.printStackTrace();
             }

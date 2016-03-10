@@ -26,13 +26,13 @@ import java.util.TooManyListenersException;
 public class Serial implements SerialPortEventListener {
     private SerialPort serialPort;
 
-    private BufferedReader tx;
-    private OutputStream rx;
+    protected BufferedReader tx;
+    protected OutputStream rx;
 
-    private List<SerialListener> listeners = new ArrayList<>();
+    protected List<SerialListener> listeners = new ArrayList<>();
 
-    private static final int TIME_OUT = 2000;
-    private static final int DATA_RATE = 9600;
+    protected static final int TIME_OUT = 2000;
+    protected static final int DATA_RATE = 9600;
 
     /**
      * Connect to a port name
